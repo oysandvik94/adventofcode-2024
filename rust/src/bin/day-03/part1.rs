@@ -1,20 +1,3 @@
-/// algorithm
-/// scan for symbol
-///     if found symbol:
-///         go back and scan for number
-///             peek left:
-///                 if number, go left
-///                 if symbol, pop
-///     if not:
-///         keep scanning
-///
-///
-fn main() {
-    let input = include_str!("./testinput.txt");
-    let answer = part1(input);
-    dbg!(answer);
-}
-
 trait IsSymbol {
     fn is_symbol(&self) -> bool;
 }
@@ -28,7 +11,7 @@ impl IsSymbol for char {
     }
 }
 
-fn part1(input_ok: &str) -> u32 {
+pub(crate) fn part1(input_ok: &str) -> u32 {
     let matrix_length: i32 = input_ok.lines().next().unwrap().len() as i32;
     let input = input_ok.replace("\n", "");
     let num_vec = parse_numbers(input.to_string());

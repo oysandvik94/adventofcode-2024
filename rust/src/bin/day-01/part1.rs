@@ -1,10 +1,4 @@
-fn main() {
-    let input = include_str!("./testinput.txt");
-    let answer = part1(input);
-    dbg!(answer);
-}
-
-fn part1(input: &str) -> u32 {
+pub(crate) fn part1(input: &str) -> u32 {
     let parsed_numbers: Vec<Result<u32, _>> = input
         .lines()
         .map(|line| {

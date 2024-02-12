@@ -1,11 +1,5 @@
 use std::{char, collections::HashSet};
 
-fn main() {
-    let input = include_str!("./testinput.txt");
-    let answer = part1(input);
-    dbg!(answer);
-}
-
 trait IsSymbol {
     fn is_symbol(&self) -> bool;
 }
@@ -19,7 +13,7 @@ impl IsSymbol for char {
     }
 }
 
-fn part1(input: &str) -> i32 {
+pub(crate) fn part2(input: &str) -> i32 {
     solve_input(input.to_string())
 }
 

@@ -1,12 +1,6 @@
 use std::{collections::HashMap, num::ParseIntError, ops::Add};
 
-fn main() {
-    let input = include_str!("./testinput.txt");
-    let answer = part2(input);
-    dbg!(answer);
-}
-
-fn part2(input: &str) -> i32 {
+pub(crate) fn part2(input: &str) -> i32 {
     struct Pair {
         first: u8,
         last: u8,

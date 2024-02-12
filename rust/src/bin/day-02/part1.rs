@@ -1,10 +1,4 @@
-fn main() {
-    let input = include_str!("./testinput.txt");
-    let answer = part1(input.trim());
-    dbg!(answer);
-}
-
-fn part1(input: &str) -> u32 {
+pub(crate) fn part1(input: &str) -> u32 {
     input
         .lines()
         .map(|game| -> u32 { analyze_game(game) })

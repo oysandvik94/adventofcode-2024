@@ -1,10 +1,4 @@
-fn main() {
-    let input = include_str!("./testinput.txt");
-    let answer = part2(input.trim());
-    dbg!(answer);
-}
-
-fn part2(input: &str) -> u32 {
+pub(crate) fn part2(input: &str) -> u32 {
     input.lines().map(analyze_game).sum()
 }
 
